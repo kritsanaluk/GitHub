@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PUI BANK : ADD ACCOUNT</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+<body>
+
+<script>
+$("#Submit").click(function(){
+    $.post("http://192.168.1.113:8443/saveAccount.php",
+    {
+        accID: $("#AccountName").val(),
+        accName: $("#AccountId").val(),
+		bankName: $("#BankCode").val()
+    },
+    function(data, status){    	
+        alert(data.Message);
+    });
+});
+</script>
+
+<h1>เพิ่มบัญชีธนาคารปลายทาง</h1>
+<hr>
+<p id="alert"></p>
+<form action="">
+<table border='0'>
+<tr>
+<td>ชื่อบัญชี</td><td><input type="text" id="AccountName"></td>
+</tr>
+<tr>
+<td>เลขบัญชี</td><td><input type="text" id="AccountId"></td>
+</tr>
+<tr>
+<td>ชื่อธนาคาร</td><td><select id="BankCode"><option id="629">PUI BANK</option><option id="112">KASIKORN</option></select></td>
+</tr>
+<tr><td colspan='2'><input type="button" id="Cancel" value="ยกเลิก" onclick='window.location.assign("http://192.168.1.113/transfer.html")'><input type="submit" id="Submit" value="เพิ่ม" onclick="submitdata()"></td></tr>
+<table>
+</form>
+</body>
+</html> 

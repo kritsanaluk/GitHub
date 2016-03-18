@@ -1,0 +1,20 @@
+*** Keywords ***
+Login
+    Open Browser    ${PageURL}    Chrome
+    Maximize Browser Window
+    Wait Until Page Contains Element    ${LoginFieldUsername}
+    #Wait Until Page Contains Element    ${LoginFieldPassword}
+    Wait Until Element Is Visible    ${LoginFieldUsername}
+    Wait Until Page Contains    ลืมรหัสผ่าน ? ส่งรหัสผ่านไปที่อีเมล์ของฉัน    30s
+    Input Text    ${LoginFieldUsername}    ${Username}
+    Input Text    ${LoginFieldPassword}    ${Password}
+    Click Element    ${LoginButtonSubmit}
+    Wait Until Page Contains    ยินดีต้อนรับสู่ระบบกองทุนสำรองเลี้ยงชีพ
+    Sleep    3
+
+Logout
+    Wait Until Page Contains Element    ${SettingButton}
+    Wait Until Element Is Visible    ${SettingButton}
+    Click Element    ${SettingButton}
+    Click Element    ${LogoutButton}
+    Wait Until Page Contains    ลืมรหัสผ่าน ? ส่งรหัสผ่านไปที่อีเมล์ของฉัน    30s

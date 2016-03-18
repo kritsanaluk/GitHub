@@ -1,0 +1,25 @@
+*** Settings ***
+
+Library           Selenium2Library
+
+
+*** Variables ***
+${URL}    http://192.168.1.113/transfer.html
+${owner}    ประธาน   ด่านสกุลเจริญกิจ  6291085597
+
+*** Test Cases ***
+Open Browser
+    Open Browser    ${URL}
+    Wait Until Page Contains Element   owner
+    Input text    owner   ${owner} 
+    Wait Until Page Contains Element   accountList
+    Select From List By Index    accountList   1
+    Wait Until Page Contains Element   amount
+    Input Text    amount   3500
+    Wait Until Page Contains Element   transfer
+    Click Button    transfer
+
+  
+
+
+*** Keywords ***

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20160112 16:21:47.848" generator="Robot 3.0 (Python 2.7.9 on win32)">
+<suite source="C:\RobotFramework\Scripts\test\Test_with_Jenkins" id="s1" name="Test with Jenkins">
+<suite source="C:\RobotFramework\Scripts\test\Test_with_Jenkins\Login_to_LH" id="s1-s1" name="Login to LH">
+<suite source="C:\RobotFramework\Scripts\test\Test_with_Jenkins\Login_to_LH\Login_Suit.txt" id="s1-s1-s1" name="Login Suit">
+<test id="s1-s1-s1-t1" name="Login">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${PageURL}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20160112 16:21:49.024" level="INFO">Opening browser 'Chrome' to base url 'http://172.16.23.58:280/#/login'</msg>
+<status status="PASS" endtime="20160112 16:21:58.065" starttime="20160112 16:21:49.023"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20160112 16:21:58.229" starttime="20160112 16:21:58.066"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${LoginFieldUsername}</arg>
+</arguments>
+<status status="PASS" endtime="20160112 16:21:58.253" starttime="20160112 16:21:58.229"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${LoginFieldUsername}</arg>
+</arguments>
+<status status="PASS" endtime="20160112 16:21:58.335" starttime="20160112 16:21:58.255"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>ลืมรหัสผ่าน ? ส่งรหัสผ่านไปที่อีเมล์ของฉัน</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20160112 16:21:58.361" starttime="20160112 16:21:58.336"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LoginFieldUsername}</arg>
+<arg>imm</arg>
+</arguments>
+<msg timestamp="20160112 16:21:58.362" level="INFO">Typing text 'imm' into text field 'txtUserName'</msg>
+<status status="PASS" endtime="20160112 16:21:58.449" starttime="20160112 16:21:58.361"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LoginFieldPassword}</arg>
+<arg>pornthida</arg>
+</arguments>
+<msg timestamp="20160112 16:21:58.451" level="INFO">Typing text 'pornthida' into text field 'txtPassword'</msg>
+<status status="PASS" endtime="20160112 16:21:58.565" starttime="20160112 16:21:58.450"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${LoginButtonSubmit}</arg>
+</arguments>
+<msg timestamp="20160112 16:21:58.566" level="INFO">Clicking element 'btnLogin'.</msg>
+<status status="PASS" endtime="20160112 16:21:58.634" starttime="20160112 16:21:58.565"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>ยินดีต้อนรับสู่ระบบกองทุนสำรองเลี้ยงชีพ</arg>
+</arguments>
+<status status="PASS" endtime="20160112 16:21:58.898" starttime="20160112 16:21:58.635"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20160112 16:22:01.899" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20160112 16:22:01.899" starttime="20160112 16:21:58.899"></status>
+</kw>
+<doc>*Login Valid Case*
+1. Open browser.
+2. Verify that the Login page is displayed.
+3. Enter valid username to Username field.
+4. Enter valid password to Password field.
+5. Click Submit button.
+6. Verify that the Welcome page is displayed.</doc>
+<status status="PASS" endtime="20160112 16:22:01.900" critical="yes" starttime="20160112 16:21:49.022"></status>
+</test>
+<test id="s1-s1-s1-t2" name="Logout">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SettingButton}</arg>
+</arguments>
+<status status="PASS" endtime="20160112 16:22:01.945" starttime="20160112 16:22:01.905"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SettingButton}</arg>
+</arguments>
+<status status="PASS" endtime="20160112 16:22:01.982" starttime="20160112 16:22:01.945"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${SettingButton}</arg>
+</arguments>
+<msg timestamp="20160112 16:22:01.983" level="INFO">Clicking element 'id=ddlSetting'.</msg>
+<status status="PASS" endtime="20160112 16:22:02.030" starttime="20160112 16:22:01.982"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${LogoutButton}</arg>
+</arguments>
+<msg timestamp="20160112 16:22:02.031" level="INFO">Clicking element 'xpath=//*[@id="ng-app"]/body/header/div[3]/div/div/ul/li[2]/a'.</msg>
+<status status="PASS" endtime="20160112 16:22:02.100" starttime="20160112 16:22:02.031"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>ลืมรหัสผ่าน ? ส่งรหัสผ่านไปที่อีเมล์ของฉัน</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20160112 16:22:06.885" starttime="20160112 16:22:02.101"></status>
+</kw>
+<doc>*Logout Valid Case*
+1. Click Setting button.
+2. Click Logout button.
+3. Verify that the Logout page is displayed.</doc>
+<status status="PASS" endtime="20160112 16:22:06.885" critical="yes" starttime="20160112 16:22:01.903"></status>
+</test>
+<status status="PASS" endtime="20160112 16:22:06.886" starttime="20160112 16:21:48.916"></status>
+</suite>
+<status status="PASS" endtime="20160112 16:22:06.890" starttime="20160112 16:21:48.913"></status>
+</suite>
+<status status="PASS" endtime="20160112 16:22:06.892" starttime="20160112 16:21:48.870"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Test with Jenkins" pass="2">Test with Jenkins</stat>
+<stat fail="0" id="s1-s1" name="Login to LH" pass="2">Test with Jenkins.Login to LH</stat>
+<stat fail="0" id="s1-s1-s1" name="Login Suit" pass="2">Test with Jenkins.Login to LH.Login Suit</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

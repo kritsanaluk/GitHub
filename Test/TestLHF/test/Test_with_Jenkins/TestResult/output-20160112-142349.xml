@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20160112 14:23:53.279" generator="Robot 3.0 (Python 2.7.9 on win32)">
+<suite source="C:\RobotFramework\Scripts\test\Test_with_Jenkins" id="s1" name="Test with Jenkins">
+<suite source="C:\RobotFramework\Scripts\test\Test_with_Jenkins\Login_to_LH" id="s1-s1" name="Login to LH">
+<suite source="C:\RobotFramework\Scripts\test\Test_with_Jenkins\Login_to_LH\Login_Suit.txt" id="s1-s1-s1" name="Login Suit">
+<test id="s1-s1-s1-t1" name="Login">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${PageURL}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20160112 14:23:53.413" level="INFO">Opening browser 'Chrome' to base url 'http://172.16.23.58:280/#/login'</msg>
+<status status="PASS" endtime="20160112 14:23:59.795" starttime="20160112 14:23:53.413"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${LoginFieldUsername}</arg>
+</arguments>
+<status status="PASS" endtime="20160112 14:23:59.824" starttime="20160112 14:23:59.796"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${LoginFieldUsername}</arg>
+</arguments>
+<status status="PASS" endtime="20160112 14:23:59.864" starttime="20160112 14:23:59.825"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>ลืมรหัสผ่าน ? ส่งรหัสผ่านไปที่อีเมล์ของฉัน</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20160112 14:23:59.885" starttime="20160112 14:23:59.865"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LoginFieldUsername}</arg>
+<arg>imm</arg>
+</arguments>
+<msg timestamp="20160112 14:23:59.886" level="INFO">Typing text 'imm' into text field 'txtUserName'</msg>
+<status status="PASS" endtime="20160112 14:23:59.981" starttime="20160112 14:23:59.886"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LoginFieldPassword}</arg>
+<arg>pornthida</arg>
+</arguments>
+<msg timestamp="20160112 14:23:59.982" level="INFO">Typing text 'pornthida' into text field 'txtPassword'</msg>
+<status status="PASS" endtime="20160112 14:24:00.091" starttime="20160112 14:23:59.982"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${LoginButtonSubmit}</arg>
+</arguments>
+<msg timestamp="20160112 14:24:00.093" level="INFO">Clicking element 'btnLogin'.</msg>
+<status status="PASS" endtime="20160112 14:24:00.161" starttime="20160112 14:24:00.092"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>ยินดีต้อนรับสู่ระบบกองทุนสำรองเลี้ยงชีพ</arg>
+</arguments>
+<status status="PASS" endtime="20160112 14:24:00.701" starttime="20160112 14:24:00.162"></status>
+</kw>
+<doc>*Login Valid Case*
+1. Open browser.
+2. Verify that the Login page is displayed.
+3. Enter valid username to Username field.
+4. Enter valid password to Password field.
+5. Click Submit button.
+6. Verify that the Welcome page is displayed.</doc>
+<status status="PASS" endtime="20160112 14:24:00.702" critical="yes" starttime="20160112 14:23:53.412"></status>
+</test>
+<test id="s1-s1-s1-t2" name="Logout">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SettingButton}</arg>
+</arguments>
+<status status="PASS" endtime="20160112 14:24:00.741" starttime="20160112 14:24:00.704"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SettingButton}</arg>
+</arguments>
+<status status="PASS" endtime="20160112 14:24:00.775" starttime="20160112 14:24:00.741"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${SettingButton}</arg>
+</arguments>
+<msg timestamp="20160112 14:24:00.776" level="INFO">Clicking element 'xpath=//*[@id="ng-app"]/body/header/div[3]/div/div'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20160112 14:24:01.033" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20160112 14:24:01.034" starttime="20160112 14:24:00.833"></status>
+</kw>
+<msg timestamp="20160112 14:24:01.040" level="FAIL">WebDriverException: Message: unknown error: Element is not clickable at point (1026, 33). Other element would receive the click: &lt;div class="block-ui-overlay"&gt;&lt;/div&gt;
+  (Session info: chrome=47.0.2526.106)
+  (Driver info: chromedriver=2.20.353145 (343b531d31eeb933ec778dbcf7081628a1396067),platform=Windows NT 6.3 x86_64)
+</msg>
+<status status="FAIL" endtime="20160112 14:24:01.040" starttime="20160112 14:24:00.776"></status>
+</kw>
+<doc>*Logout Valid Case*
+1. Click Setting button.
+2. Click Logout button.
+3. Verify that the Logout page is displayed.</doc>
+<status status="FAIL" endtime="20160112 14:24:01.042" critical="yes" starttime="20160112 14:24:00.703">WebDriverException: Message: unknown error: Element is not clickable at point (1026, 33). Other element would receive the click: &lt;div class="block-ui-overlay"&gt;&lt;/div&gt;
+  (Session info: chrome=47.0.2526.106)
+  (Driver info: chromedriver=2.20.353145 (343b531d31eeb933ec778dbcf7081628a1396067),platform=Windows NT 6.3 x86_64)
+</status>
+</test>
+<status status="FAIL" endtime="20160112 14:24:01.045" starttime="20160112 14:23:53.316"></status>
+</suite>
+<status status="FAIL" endtime="20160112 14:24:01.054" starttime="20160112 14:23:53.314"></status>
+</suite>
+<status status="FAIL" endtime="20160112 14:24:01.061" starttime="20160112 14:23:53.291"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="1">Critical Tests</stat>
+<stat fail="1" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Test with Jenkins" pass="1">Test with Jenkins</stat>
+<stat fail="1" id="s1-s1" name="Login to LH" pass="1">Test with Jenkins.Login to LH</stat>
+<stat fail="1" id="s1-s1-s1" name="Login Suit" pass="1">Test with Jenkins.Login to LH.Login Suit</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

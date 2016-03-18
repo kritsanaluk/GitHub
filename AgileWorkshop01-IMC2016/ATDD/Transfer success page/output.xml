@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20160226 16:33:50.451" generator="Robot 2.9.2 (Python 2.7.8 on win32)">
+<suite source="C:\Users\Prawwanit\Documents\GitHub\AgileWorkshop01-IMC2016\ATDD\Transfer success page\transfer.txt" id="s1" name="Transfer">
+<test id="s1-t1" name="Open Browser">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20160226 16:33:50.651" level="INFO">Opening browser 'firefox' to base url 'http://192.168.1.113/transfer.html'</msg>
+<status status="PASS" endtime="20160226 16:34:01.613" starttime="20160226 16:33:50.650"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>owner</arg>
+</arguments>
+<status status="PASS" endtime="20160226 16:34:01.667" starttime="20160226 16:34:01.614"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>owner</arg>
+<arg>${owner}</arg>
+</arguments>
+<msg timestamp="20160226 16:34:01.668" level="INFO">Typing text 'ประธาน ด่านสกุลเจริญกิจ 6291085597' into text field 'owner'</msg>
+<status status="PASS" endtime="20160226 16:34:01.749" starttime="20160226 16:34:01.668"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>accountList</arg>
+</arguments>
+<status status="PASS" endtime="20160226 16:34:01.761" starttime="20160226 16:34:01.749"></status>
+</kw>
+<kw name="Select From List By Index" library="Selenium2Library">
+<doc>Selects `*indexes` from list identified by `locator`</doc>
+<arguments>
+<arg>accountList</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20160226 16:34:01.762" level="INFO">Selecting index(es) '1' from list 'accountList'.</msg>
+<status status="PASS" endtime="20160226 16:34:02.765" starttime="20160226 16:34:01.762"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>amount</arg>
+</arguments>
+<status status="PASS" endtime="20160226 16:34:02.776" starttime="20160226 16:34:02.765"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>amount</arg>
+<arg>3500</arg>
+</arguments>
+<msg timestamp="20160226 16:34:02.778" level="INFO">Typing text '3500' into text field 'amount'</msg>
+<status status="PASS" endtime="20160226 16:34:02.866" starttime="20160226 16:34:02.777"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>transfer</arg>
+</arguments>
+<status status="PASS" endtime="20160226 16:34:02.876" starttime="20160226 16:34:02.866"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>transfer</arg>
+</arguments>
+<msg timestamp="20160226 16:34:02.877" level="INFO">Clicking button 'transfer'.</msg>
+<status status="PASS" endtime="20160226 16:34:03.276" starttime="20160226 16:34:02.876"></status>
+</kw>
+<status status="PASS" endtime="20160226 16:34:03.277" critical="yes" starttime="20160226 16:33:50.649"></status>
+</test>
+<status status="PASS" endtime="20160226 16:34:03.280" starttime="20160226 16:33:50.456"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Transfer" pass="1">Transfer</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

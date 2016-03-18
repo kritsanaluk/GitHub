@@ -1,0 +1,12 @@
+AddAccountResult
+{
+ IsSuccess = true,
+ Message = "เพิ่มข้อมูลบัญชีเรียบร้อยแล้ว"
+}
+
+
+AddAccountResult
+{
+ IsSuccess = false,
+ Message = "เลขบัญชีที่ต้องการเพิ่ม มีอยู่แล้วในระบบ"
+}

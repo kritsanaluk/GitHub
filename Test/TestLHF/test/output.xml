@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20160108 11:25:02.787" generator="Robot 3.0 (Python 2.7.9 on win32)">
+<suite source="C:\RobotFramework\Scripts\test\test01.txt" id="s1" name="Test01">
+<test id="s1-t1" name="Get OTP from outlook email">
+<kw name="Open Browser and Login">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20160108 11:25:02.917" level="INFO">Opening browser 'Chrome' to base url 'https://ex2.aware.co.th/owa/'</msg>
+<status status="PASS" endtime="20160108 11:25:05.699" starttime="20160108 11:25:02.917"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>username</arg>
+<arg>${Username}</arg>
+</arguments>
+<msg timestamp="20160108 11:25:05.700" level="INFO">Typing text 'aware\kritsanaluk.p' into text field 'username'</msg>
+<status status="PASS" endtime="20160108 11:25:05.818" starttime="20160108 11:25:05.700"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>password</arg>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20160108 11:25:05.819" level="INFO">Typing text 'Pong4Chin@1' into text field 'password'</msg>
+<status status="PASS" endtime="20160108 11:25:05.908" starttime="20160108 11:25:05.819"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="lgnDiv"]/div[9]/div</arg>
+</arguments>
+<msg timestamp="20160108 11:25:05.909" level="INFO">Clicking element 'xpath=//*[@id="lgnDiv"]/div[9]/div'.</msg>
+<status status="PASS" endtime="20160108 11:25:09.810" starttime="20160108 11:25:05.909"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20160108 11:25:14.819" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20160108 11:25:14.819" starttime="20160108 11:25:09.810"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="Item.MessageUniqueBody"]/div/div/font/span/div[2]/font/span</arg>
+</arguments>
+<assign>
+<var>${TMP}</var>
+</assign>
+<msg timestamp="20160108 11:25:14.897" level="INFO">${TMP} = Your password for login SMA is 8718</msg>
+<status status="PASS" endtime="20160108 11:25:14.897" starttime="20160108 11:25:14.819"></status>
+</kw>
+<kw name="Fetch From Right" library="String">
+<doc>Returns contents of the ``string`` after the last occurrence of ``marker``.</doc>
+<arguments>
+<arg>${TMP}</arg>
+<arg>${SPACE}</arg>
+</arguments>
+<assign>
+<var>${OTP}</var>
+</assign>
+<msg timestamp="20160108 11:25:14.897" level="INFO">${OTP} = 8718</msg>
+<status status="PASS" endtime="20160108 11:25:14.897" starttime="20160108 11:25:14.897"></status>
+</kw>
+<status status="PASS" endtime="20160108 11:25:14.897" starttime="20160108 11:25:02.917"></status>
+</kw>
+<status status="PASS" endtime="20160108 11:25:14.897" critical="yes" starttime="20160108 11:25:02.917"></status>
+</test>
+<status status="PASS" endtime="20160108 11:25:14.897" starttime="20160108 11:25:02.787"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Test01" pass="1">Test01</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

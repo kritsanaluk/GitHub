@@ -1,0 +1,19 @@
+*** Settings ***
+Library           Selenium2Library    #Test teardown    Close Browser
+
+*** Variables ***
+${Username}       aware\\kritsanaluk.p
+${Password}       Pong4Chin@1
+${URL}            https://ex2.aware.co.th/owa/
+${BROWSER}        Chrome
+
+*** Testcases ***
+Get OTP from outlook email
+    Open Browser and Login
+
+*** Keywords ***
+Open Browser and Login
+    Open BROWSER    ${URL}    ${BROWSER}
+    Input Text    username    ${Username}
+    Input Text    password    ${Password}
+    Click Element    xpath=//*[@id="lgnDiv"]/div[9]/div

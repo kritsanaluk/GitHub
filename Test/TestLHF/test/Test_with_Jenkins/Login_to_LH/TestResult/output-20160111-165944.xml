@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20160111 16:59:44.537" generator="Robot 3.0 (Python 2.7.9 on win32)">
+<suite source="C:\RobotFramework\Scripts\test\Test_with_Jenkins\Login_to_LH\Login_Suit.txt" id="s1" name="Login Suit">
+<test id="s1-t1" name="Login Valid">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${PageURL}</arg>
+<arg>firefox</arg>
+</arguments>
+<msg timestamp="20160111 16:59:44.661" level="INFO">Opening browser 'firefox' to base url 'http://172.16.23.58:280/#/login'</msg>
+<status status="PASS" endtime="20160111 16:59:59.799" starttime="20160111 16:59:44.661"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${LoginFieldUsername}</arg>
+</arguments>
+<status status="PASS" endtime="20160111 17:00:00.133" starttime="20160111 16:59:59.800"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${LoginFieldPassword}</arg>
+</arguments>
+<status status="PASS" endtime="20160111 17:00:00.531" starttime="20160111 17:00:00.134"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${LoginFieldUsername}</arg>
+</arguments>
+<status status="PASS" endtime="20160111 17:00:00.580" starttime="20160111 17:00:00.531"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>ลืมรหัสผ่าน ? ส่งรหัสผ่านไปที่อีเมล์ของฉัน</arg>
+<arg>timeout=30</arg>
+</arguments>
+<status status="PASS" endtime="20160111 17:00:00.601" starttime="20160111 17:00:00.581"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LoginFieldUsername}</arg>
+<arg>imm</arg>
+</arguments>
+<msg timestamp="20160111 17:00:00.602" level="INFO">Typing text 'imm' into text field 'txtUserName'</msg>
+<status status="PASS" endtime="20160111 17:00:00.697" starttime="20160111 17:00:00.601"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LoginFieldPassword}</arg>
+<arg>pornthida</arg>
+</arguments>
+<msg timestamp="20160111 17:00:00.698" level="INFO">Typing text 'pornthida' into text field 'txtPassword'</msg>
+<status status="PASS" endtime="20160111 17:00:00.836" starttime="20160111 17:00:00.697"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${LoginButtonSubmit}</arg>
+</arguments>
+<msg timestamp="20160111 17:00:00.837" level="INFO">Clicking element 'btnLogin'.</msg>
+<status status="PASS" endtime="20160111 17:00:02.026" starttime="20160111 17:00:00.836"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>ยินดีต้อนรับสู่ระบบกองทุนสำรองเลี้ยงชีพ</arg>
+</arguments>
+<status status="PASS" endtime="20160111 17:00:09.504" starttime="20160111 17:00:02.027"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${SettingButton}</arg>
+</arguments>
+<msg timestamp="20160111 17:00:09.505" level="INFO">Clicking element 'xpath=//*[@id="ddlSetting"]/i'.</msg>
+<status status="PASS" endtime="20160111 17:00:09.649" starttime="20160111 17:00:09.504"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${LogoutButton}</arg>
+</arguments>
+<msg timestamp="20160111 17:00:09.650" level="INFO">Clicking element 'xpath=//*[@id="ng-app"]/body/header/div[3]/div/div/ul/li[2]/a'.</msg>
+<status status="PASS" endtime="20160111 17:00:09.795" starttime="20160111 17:00:09.649"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>ลืมรหัสผ่าน ? ส่งรหัสผ่านไปที่อีเมล์ของฉัน</arg>
+<arg>timeout=30</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20160111 17:00:40.031" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20160111 17:00:40.032" starttime="20160111 17:00:39.956"></status>
+</kw>
+<msg timestamp="20160111 17:00:40.033" level="FAIL">Text 'ลืมรหัสผ่าน ? ส่งรหัสผ่านไปที่อีเมล์ของฉัน' did not appear in 30 seconds</msg>
+<status status="FAIL" endtime="20160111 17:00:40.033" starttime="20160111 17:00:09.795"></status>
+</kw>
+<doc>*Login Valid Case*
+1. Open browser.
+2. Verify that the Login page is displayed.
+3. Enter valid username to Username field.
+4. Enter valid password to Password field.
+5. Click Submit button.
+6. Verify that the Welcome page is displayed.
+7. Click Logout button.
+8. Click Setting button.
+9. Verify that the Logout page is displayed.</doc>
+<status status="FAIL" endtime="20160111 17:00:40.033" critical="yes" starttime="20160111 16:59:44.659">Text 'ลืมรหัสผ่าน ? ส่งรหัสผ่านไปที่อีเมล์ของฉัน' did not appear in 30 seconds</status>
+</test>
+<status status="FAIL" endtime="20160111 17:00:40.037" starttime="20160111 16:59:44.540"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Login Suit" pass="0">Login Suit</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

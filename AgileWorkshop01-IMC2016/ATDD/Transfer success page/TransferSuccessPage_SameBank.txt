@@ -1,0 +1,45 @@
+*** Settings ***
+Library    Selenium2Library
+
+*** Variables ***
+${TransferOwner}    ประธาน 6291085597
+${TransferSucccessOwner}    ประธาน 6291085597
+${DestinationName}    สมเกียรติ ปุ๋ยสูงเนิน
+${DestinationBank}      Pui Bank
+#${DestinationBankBranch}    หัวหิน
+${DestinationAccount}    6292181176
+${Amount}    50,000.00
+${Fee}    0.00
+${Balance}    50,000.00
+${Notificationmsg}    โอนสำเร็จจ้า
+#${TransferDateTime}
+
+*** Testcases ***
+Open Browser
+    Wait Until Page Contains Element    id=ownertransfername
+    Wait Until Page Contains    ${TransferOwner}
+
+    Wait Until Page Contains Element    id=destinationname
+    Wait Until Page Contains    ${TransferSucccessOwner}
+
+    Wait Until Page Contains Element    id=destinationbank
+    Wait Until Page Contains    ${DestinationBank}
+    
+    Wait Until Page Contains Element    id=destinationaccount
+    Wait Until Page Contains    ${DestinationBankBranch}
+
+    Wait Until Page Contains Element    id=amount
+    Wait Until Page Contains    ${Amount}
+
+    Wait Until Page Contains Element    id=fee
+    Wait Until Page Contains    ${Fee}
+
+    Wait Until Page Contains Element    id=balance
+    Wait Until Page Contains    ${Balance}
+
+    Wait Until Page Contains Element    id=notificationmsg
+    Wait Until Page Contains    ${Notificationmsg}
+
+
+*** Keywords ***
+

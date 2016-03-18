@@ -1,0 +1,48 @@
+*** Settings ***
+Metadata          Version    1.0    # The version of test script
+Metadata          Executed at    %{COMPUTERNAME}    # The work station of this exexution
+Metadata          Test User    %{USERNAME}    # Execute by
+Metadata          Operating System    %{OS}    # The OS under this execution
+Metadata          Processor    %{PROCESSOR_LEVEL}    # Processor information
+Metadata          Lastest Modify by    Kritsanaluk
+Metadata          Modification Detail    Separate functions
+Library           Selenium2Library
+Resource          Variables.txt
+Resource          Repository.txt
+Resource          Keywords.txt
+
+*** Variables ***
+
+*** Test Cases ***
+Login
+    [Documentation]    *Login Valid Case*
+    ...    1. Open browser.
+    ...    2. Verify that the Login page is displayed.
+    ...    3. Enter valid username to Username field.
+    ...    4. Enter valid password to Password field.
+    ...    5. Click Submit button.
+    ...    6. Verify that the Welcome page is displayed.
+    #Open Browser    ${PageURL}    Chrome
+    #Maximize Browser Window
+    #Wait Until Page Contains Element    ${LoginFieldUsername}
+    ##Wait Until Page Contains Element    ${LoginFieldPassword}
+    #Wait Until Element Is Visible    ${LoginFieldUsername}
+    #Wait Until Page Contains    ลืมรหัสผ่าน ? ส่งรหัสผ่านไปที่อีเมล์ของฉัน    30s
+    #Input Text    ${LoginFieldUsername}    ${Username}
+    #Input Text    ${LoginFieldPassword}    ${Password}
+    #Click Element    ${LoginButtonSubmit}
+    #Wait Until Page Contains    ยินดีต้อนรับสู่ระบบกองทุนสำรองเลี้ยงชีพ
+    #Sleep    3
+    Login
+
+Logout
+    [Documentation]    *Logout Valid Case*
+    ...    1. Click Setting button.
+    ...    2. Click Logout button.
+    ...    3. Verify that the Logout page is displayed.
+    #Wait Until Page Contains Element    ${SettingButton}
+    #Wait Until Element Is Visible    ${SettingButton}
+    #Click Element    ${SettingButton}
+    #Click Element    ${LogoutButton}
+    #Wait Until Page Contains    ลืมรหัสผ่าน ? ส่งรหัสผ่านไปที่อีเมล์ของฉัน    30s
+    Logout
